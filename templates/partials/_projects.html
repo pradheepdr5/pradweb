@@ -1,0 +1,51 @@
+    {% load static %}
+    <!-- project-->
+    <div id="project" class='bg-secondary'>
+        <div class="container-fluid p-0">
+            <div class="row no-gutters">
+                {% if projects %}
+                {% for project in projects %}
+                <div class="col-lg-4 col-sm-6">
+                <a class="project-box" href="{{ project.link }}">
+                    <img class="img-fluid" src="{{ project.thumbnail.url }}" alt="" />
+                    <div class="project-box-caption">
+                        <div class="project-category text-white-50">{{ project.category }}</div>
+                        <div class="project-name">{{ project.title }}</div>
+                    </div>
+                </a>
+            </div>
+                {% endfor %}
+                {% else %}
+                <div class="col-lg-4 col-sm-6">
+                    <a class="project-box" href="https://github.com/pradheepdr/Real-time-Insights-from-Social-Media-Data">
+                        <img class="img-fluid" src="{% static 'img/project/twitter-analytics-project.jpg' %}" alt="" />
+                        <div class="project-box-caption">
+                            <div class="project-category text-white-50">Analysis</div>
+                            <div class="project-name">Real-time Insights from Social Media Data</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="project-box" href="{% static 'img/project/realestate-webapp-project.jpg' %}">
+                        <img class="img-fluid" src="{% static 'img/project/realestate-webapp-project.jpg' %}" alt="" />
+                        <div class="project-box-caption">
+                            <div class="project-category text-white-50">Web App</div>
+                            <div class="project-name">Real Estate Property Search</div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="col-lg-4 col-sm-6">
+                    <a class="project-box" href="{% static 'img/project/weather-webapp-project.jpg' %}">
+                        <img class="img-fluid" src="{% static 'img/project/weather-webapp-project.jpg' %}"" alt="" />
+                        <div class="project-box-caption">
+                            <div class="project-category text-white-50">Web App &amp; Analytics</div>
+                            <div class="project-name">KEA Weather Prediction Contest</div>
+                        </div>
+                    </a>
+                </div>
+                {% endif %}
+                
+            </div>
+        </div>
+    </div>

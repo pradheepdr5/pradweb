@@ -1,0 +1,27 @@
+        <!-- Academics-->
+        <section class="page-section bg-primary" id="academics">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">Work &amp; Academics</h2>
+                        <hr class="divider light my-4" />
+                        {% if experience %}
+                        {% if experience.postgraduation is not null %}
+                            <p class="text-white-50 mb-4">{{ experience.undergraduation}}</p>
+                        {% endif %}
+                        
+                        <p class="text-white-50 mb-4">{{ experience.workexperience1 }}</p>
+                        
+                        {% if experience.workexperience2 is not null %}
+                            <p class="text-white-50 mb-4">{{ experience.workexperience2 }}</p>
+                        {% endif %}
+                        
+                        {% else %}
+                        <p class="text-white-50 mb-4">Completed Under-Graduate Degree in Computer Science &amp; Engineering</p>
+                        <p class="text-white-50 mb-4">Working in Cognizant as a Data Analyst with 2 years of experience in data analytics, data extraction, data modelling, data pipelining and data visualization</p>
+                        {% endif %}
+                        <a class="btn btn-light btn-xl js-scroll-trigger" href="#academics">Get Started!</a>
+                    </div>
+                </div>
+            </div>
+        </section>

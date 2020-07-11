@@ -1,0 +1,62 @@
+<!-- Accomplishments-->
+<section class="page-section" id="accomplishments">
+    <div class="container">
+        <h2 class="text-center mt-0">Accomplishments</h2>
+        <hr class="divider my-4" />
+        <div class="row">
+            {% if accomplishments %}
+                {% for accomplishment in accomplishments %}
+                    {% if accomplishments|length >= 5 %}
+                        <div class="col-lg-3 col-md-3 text-center">
+                    {% elif accomplishments|length >= 3 %}
+                        <div class="col-lg-4 col-md-4 text-center">
+                    {% else %}
+                        <div class="col-lg-6 col-md-6 text-center">
+                    {% endif %}
+                            <div class="mt-5">
+                            <i class="fas fa-4x fa-certificate text-primary mb-4"></i>
+                            <h3 class="h4 mb-2">{{ accomplishment.title }}</h3>
+                            <p class="text-muted mb-0">{{ accomplishment.description }}</p>
+                            <a class="d-block" href="{{ accomplishment.link }}">View Certificate</a>
+                        </div>
+                    </div>
+            {% endfor %}
+            {% else %}
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <i class="fas fa-4x fa-certificate text-primary mb-4"></i>
+                    <h3 class="h4 mb-2">Python Programming Track</h3>
+                    <p class="text-muted mb-0">Completed Python Programming Skill Track in Datacamp</p>
+                    <a class="d-block" href="https://www.datacamp.com/statement-of-accomplishment/track/6b1beb7e9bf26f478d73c93c0decce74237d0a4c">View Certificate</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <i class="fas fa-4x fa-certificate text-primary mb-4"></i>
+                    <h3 class="h4 mb-2">Coding Best Practices with Python</h3>
+                    <p class="text-muted mb-0">Completed Coding Best Practices with Python Skill Track in Datacamp</p>
+                    <a class="d-block" href="https://www.datacamp.com/statement-of-accomplishment/track/c06fb9a61778336d852017aa56089c54241dc8a8">View Certificate</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <i class="fas fa-4x fa-certificate text-primary mb-4"></i>
+                    <h3 class="h4 mb-2">Importing &amp; Cleaning Data with Python</h3>
+                    <p class="text-muted mb-0">Completed Importing &amp; Cleaning Data with Python Skill Track in Datacamp</p>
+                    <a class="d-block" href="https://www.datacamp.com/statement-of-accomplishment/track/5c8a5acb4aa12a1f605bdd4b697f5e3c82d2284d">View Certificate</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <i class="fas fa-4x fa-certificate text-primary mb-4"></i>
+                    <h3 class="h4 mb-2">Python Django Dev to Deployment</h3>
+                    <p class="text-muted mb-0">Completed Python Django Dev to Deployment course in Udemy</p>
+                    <a class="d-block" href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-0a1dfaca-831a-4aa6-b994-97bb1afa0fe2.pdf">View Certificate</a>
+                </div>
+            </div>
+            {% endif %}
+
+            
+        </div>
+    </div>
+</section>
