@@ -1,6 +1,6 @@
 from django.db import models
 
-class Bio(models.Model):
+class Profile(models.Model):
     """
     Model template for Portfolio Bio Information Section
     """

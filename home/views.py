@@ -1,10 +1,10 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import Bio, WorkAcademics, Accomplishment, Project, Portfolio, Contact
+from .models import Profile, WorkAcademics, Accomplishment, Project, Portfolio, Contact
 
 def home(request):
     try:
-        bio = Bio.objects.all().order_by('-id')[0]
+        bio = Profile.objects.all().order_by('-id')[0]
         experience = WorkAcademics.objects.all().order_by('-id')[0]
         accomplishments = Accomplishment.objects.all().order_by('-id').filter(is_published=True)
         projects = Project.objects.all().order_by('-id').filter(is_published=True)
