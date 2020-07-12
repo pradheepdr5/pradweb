@@ -21,8 +21,8 @@ def home(request):
         
     except IndexError:
         print("Index Error")
-    else:
-        return render(request, 'index/index.html', context)
+    #else:
+        #return render(request, 'index/index.html', context)
     
 
   
