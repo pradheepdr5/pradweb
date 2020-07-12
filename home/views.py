@@ -23,7 +23,3 @@ def home(request):
         print("Index Error")
     else:
         return render(request, 'index/index.html', context)
-    
-
-  
-    
