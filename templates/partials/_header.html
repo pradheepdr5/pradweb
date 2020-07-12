@@ -1,25 +1,40 @@
-        
-        <!-- Masthead-->
+    
+
+         <!-- Masthead-->
+        {% if bio %}
         <header class="masthead">
             <div class="container h-100">
                 <div class="row h-100 align-items-center justify-content-center text-center">
                     <div class="col-lg-10 align-self-end">
-                        {% if bio %}
-                            <h2 class="text-uppercase text-white font-weight-bold">
+                        
+                        <h1 class="text-uppercase text-white font-weight-bold">
                             {{ bio.intro }}<br/>
-                            {{ bio.short_description }} <br> </h2>
-                            <hr class="divider my-4" />
-                        {% else %}
-                        <h2 class="text-uppercase text-white font-weight-bold">
-                            Hello! I'm Pradheep D R<br/>
-                            I'm an emerging Data Scientist <br> </h2>
-                            <hr class="divider my-4" />
-                        {% endif %}
+                            {{ bio.short_description }}
+                        </h1>
+                        <hr class="divider my-4" />
                     </div>
                     <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 font-weight-light mb-5">My career interest lies in Data Science. I am open to all sorts of Data Scientist roles.</p>
-                        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#academics">Know More About Me</a>
+                        <p class="text-white-75 font-weight-light mb-5">{{ bio.long_description }}</p>
+                        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#work">Know More About Me</a>
                     </div>
                 </div>
             </div>
         </header>
+        {% else %}
+        <header class="masthead">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-10 align-self-end">
+                        
+                        <h1 class="text-uppercase text-white font-weight-bold">Your Favorite Source of Free Bootstrap Themes</h1>
+                        <hr class="divider my-4" />
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <p class="text-white-75 font-weight-light mb-5">Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme and start customizing, no strings attached!</p>
+                        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#work">Find Out More</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        {% endif %}
+

@@ -1,0 +1,36 @@
+        <!-- Work-->
+        {% if experience %}
+        <section class="page-section bg-primary" id="work">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h1 class="text-white mt-0">Work &amp; Academics</h1>
+                        <hr class="divider light my-4" />
+                        <h5 class="text-white-50 mb-4">{{ experience.workexperience1 }}</h5>
+                        {% if experience.workexperience2 is not null %}
+                            <h5 class="text-white-50 mb-4">{{ experience.workexperience2 }}</h5>
+                        {% endif %}
+                        {% if experience.postgraduation is not null %}
+                            <h5 class="text-white-50 mb-4">{{ experience.postgraduation}}</h5>
+                        {% endif %}
+
+                        <h5 class="text-white-50 mb-4">{{ experience.undergraduation }}</h5>
+                        <a class="btn btn-light btn-xl js-scroll-trigger" href="#accomplishments">Lookout My Accomplishments</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% else %}
+        <section class="page-section bg-primary" id="work">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">Work &amp; Academics</h2>
+                        <hr class="divider light my-4" />
+                        <p class="text-white-50 mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! Choose one of our open source, free to download, and easy to use themes! No strings attached!</p>
+                        <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endif %}

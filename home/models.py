@@ -51,6 +51,37 @@ class Project(models.Model):
     link = models.URLField()
     thumbnail = models.ImageField(upload_to='project/thumbnails/')
     is_published = models.BooleanField(default=True)
+
     def __str__(self):
         return self.title
 
+class Contact(models.Model):
+    """
+    Model template for Contacts Information Section
+    """
+    name = models.CharField(max_length=200)
+    mobile = models.CharField(max_length=20)
+    email = models.EmailField(max_length=100)
+    linkedin = models.URLField()
+    resume = models.FileField(upload_to="resume/%Y/%m/%d/")
+    skype = models.CharField(max_length=100)
+    twitter = models.URLField()
+    address = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.name
+
+class Portfolio(models.Model):
+    """
+    Model template for Portfolio Information Section
+    """
+    name = models.CharField(max_length=200)
+    git = models.URLField()
+    hackerrank = models.URLField()
+    datacamp = models.URLField()
+    medium = models.URLField()
+    hackerearth = models.URLField()
+    codechef = models.URLField()
+
+    def __str__(self):
+        return self.name
