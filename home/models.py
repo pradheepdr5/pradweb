@@ -7,7 +7,7 @@ class Bio(models.Model):
     name = models.CharField(max_length=100)
     intro = models.CharField(max_length = 200)
     short_description = models.CharField(max_length = 200)
-    long_desctiption = models.TextField(max_length=500)
+    long_description = models.TextField(max_length=500)
 
     def __str__(self):
         return self.name
